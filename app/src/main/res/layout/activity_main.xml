@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/iv_mainpic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:adjustViewBounds="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/main1" />
+
+    <ImageView
+        android:id="@+id/iv_load"
+        android:layout_width="25dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/iv_load2"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_mainpic"
+        app:srcCompat="@android:drawable/button_onoff_indicator_off"
+        app:tint="@color/green" />
+
+    <ImageView
+        android:id="@+id/iv_load2"
+        android:layout_width="25dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_mainpic"
+        app:srcCompat="@android:drawable/button_onoff_indicator_off"
+        app:tint="#AFCFBD" />
+
+    <ImageView
+        android:id="@+id/iv_load3"
+        android:layout_width="25dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toEndOf="@+id/iv_load2"
+        app:layout_constraintTop_toBottomOf="@+id/iv_mainpic"
+        app:srcCompat="@android:drawable/button_onoff_indicator_off"
+        app:tint="#AFCFBD" />
+
+    <TextView
+        android:id="@+id/tv_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:gravity="center"
+        android:letterSpacing="-0.0"
+        android:lineSpacingExtra="-12dp"
+        android:text="Find the right\nProfessors for You!"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_load" />
+
+    <TextView
+        android:id="@+id/tv_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/poppins"
+        android:lineSpacingExtra="-5dp"
+        android:text="Find the right professors to take\nin your class!"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_header" />
+
+    <Button
+        android:id="@+id/btn_continue"
+        android:layout_width="320dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="40dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Continue"
+        android:textColor="@color/white"
+        android:background="@drawable/rounded_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="160dp"
+    android:layout_height="300dp"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="2dp"
+    app:cardElevation="8dp">
+
+    <LinearLayout
+        android:id="@+id/ll_allcard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <ImageView
+            android:id="@+id/featured_image"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/prof_sample" />
+
+        <TextView
+            android:id="@+id/featured_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Leo Deleon"
+            android:textColor="@color/green"
+            android:textSize="19dp"/>
+
+        <RatingBar
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:rating="3.5" />
+
+        <TextView
+            android:id="@+id/featured_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@font/open_sans"
+            android:text="Computer Science Professor"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btn_addfeatured"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/rounded_button"
+            android:fontFamily="@font/poppins_semibold"
+            android:foregroundGravity="center_vertical"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="@string/addButton"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            android:textSize="11sp" />
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

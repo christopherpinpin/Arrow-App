@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".userDashboard">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/iv_home"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/menu_icon" />
+
+        <TextView
+            android:id="@+id/app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Arrow"
+            android:textColor="@color/green"
+            android:textSize="20dp" />
+
+
+        <ImageView
+            android:id="@+id/iv_profile"
+            android:layout_width="40dp"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@color/white"
+            android:padding="5dp"
+            android:src="@drawable/profile_icon" />
+
+
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/submit_image"
+            android:layout_width="wrap_content"
+            android:layout_height="300dp"
+            android:layout_marginTop="0dp"
+            android:src="@drawable/request_icon" />
+
+        <TextView
+            android:id="@+id/submit_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Can't Find Your Prof?"
+            android:layout_below="@id/submit_image"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/submitProfName"
+            android:layout_width="285dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/submit_title"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/open_sans"
+            android:hint="Enter Professor's Name" />
+
+        <EditText
+            android:id="@+id/submitProfCollege"
+            android:layout_width="285dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/submitProfName"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/open_sans"
+            android:hint="Enter College or Subject"/>
+        <EditText
+            android:id="@+id/submitDesc"
+            android:layout_width="285dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/submitProfCollege"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/open_sans"
+            android:hint="Specify Concern" />
+
+
+        <Button
+            android:id="@+id/btn_submitreview"
+            android:layout_width="202dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/submitDesc"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@color/green"
+            android:fontFamily="@font/open_sans_semibold"
+            android:text="Submit Request"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

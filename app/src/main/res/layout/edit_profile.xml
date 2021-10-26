@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_myprofile"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".userDashboard">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/iv_home"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/menu_icon" />
+
+        <TextView
+            android:id="@+id/app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Arrow"
+            android:textColor="@color/green"
+            android:textSize="20dp" />
+
+
+        <ImageView
+            android:id="@+id/iv_profile"
+            android:layout_width="40dp"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@color/white"
+            android:padding="5dp"
+            android:src="@drawable/profile_icon" />
+
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/edit_title"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Edit Profile"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_profImage"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_below="@id/edit_title"
+            android:layout_centerHorizontal="true"
+            app:cardBackgroundColor="@color/white"
+            android:layout_marginTop="5dp"
+            app:cardCornerRadius="150dp">
+
+            <ImageView
+
+                android:id="@+id/prof_Image"
+                android:layout_width="match_parent"
+
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:scaleType="centerCrop"
+                android:src="@drawable/default_avatar">
+
+            </ImageView>
+
+
+
+        </androidx.cardview.widget.CardView>
+
+        <Spinner
+            android:id="@+id/sp_changeProfile"
+            android:layout_width="109dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/card_profImage"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/open_sans"
+            android:padding="10dp"
+            android:text="CCS"
+            android:textSize="10dp" />
+
+        <ImageView
+            android:id="@+id/Button_ChangeProfile"
+            android:layout_width="28dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="3dp"
+            android:layout_below="@id/card_profImage"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/sp_changeProfile"
+            android:fontFamily="@font/open_sans_semibold"
+            android:src="@drawable/check_icon"
+            android:text="Change Profile" />
+
+
+
+
+        <TextView
+            android:id="@+id/first_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@id/Button_ChangeProfile"
+            android:fontFamily="@font/open_sans_semibold"
+            android:text="First Name"
+            android:textColor="@color/darker_gray"
+            android:textSize="14dp" />
+
+        <EditText
+            android:id="@+id/edit_firstName"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/first_name"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/open_sans"
+            android:hint="Jane"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/ed_last_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@id/edit_firstName"
+            android:fontFamily="@font/open_sans_semibold"
+            android:text="Last Name"
+            android:textColor="@color/darker_gray"
+            android:textSize="14dp" />
+
+        <EditText
+            android:id="@+id/edit_LastName"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ed_last_name"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/open_sans"
+            android:hint="Dela Cruz"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/College_Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edit_LastName"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/open_sans_semibold"
+            android:text="College"
+            android:textColor="@color/darker_gray"
+            android:textSize="14dp" />
+
+        <Spinner
+            android:id="@+id/sp_editCollege"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/College_Name"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/open_sans"
+            android:padding="10dp"
+            android:text="CCS"
+            android:textSize="14dp" />
+
+        <Button
+            android:id="@+id/btn_delete"
+            android:layout_width="202dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sp_editCollege"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="#B13939"
+            android:fontFamily="@font/open_sans_semibold"
+            android:text="Delete Profile"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+
+
+
+
+        <Button
+            android:id="@+id/btn_submitedit"
+            android:layout_width="202dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_delete"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@color/green"
+            android:fontFamily="@font/open_sans_semibold"
+            android:text="Submit"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

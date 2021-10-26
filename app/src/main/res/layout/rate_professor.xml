@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".userDashboard">
+
+    <!-- HEADER START -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/iv_home"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/menu_icon" />
+
+        <TextView
+            android:id="@+id/app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Arrow"
+            android:textColor="@color/green"
+            android:textSize="20dp" />
+
+
+        <ImageView
+            android:id="@+id/iv_profile"
+            android:layout_width="40dp"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@color/white"
+            android:padding="5dp"
+            android:src="@drawable/profile_icon" />
+
+
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_marginTop="15dp"
+                    android:id="@+id/RATE_TITLE"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="Rate Your Professor"
+                    android:textColor="@color/black"
+                    android:textSize="23dp" />
+
+                <TextView
+                    android:id="@+id/RATE_subtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/RATE_TITLE"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/open_sans"
+                    android:text="Leave a feedback about your experience."
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/learning_event_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/RATE_subtitle"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/first_question"
+                    android:textColor="@color/green"
+                    android:textSize="16dp" />
+
+
+                <RadioGroup
+                    android:id="@+id/rg_sync"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/learning_event_title"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_none"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="None" />
+
+                    <RadioButton
+                        android:id="@+id/rb_few"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="Few" />
+
+                    <RadioButton
+                        android:id="@+id/rb_moderate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="Moderate" />
+
+                    <RadioButton
+                        android:id="@+id/rb_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="More" />
+
+
+                    <RadioButton
+                        android:id="@+id/rb_pure"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="Pure" />
+                </RadioGroup>
+
+
+                <TextView
+                    android:id="@+id/attendance_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rg_sync"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/second_question"
+                    android:textColor="@color/green"
+                    android:textSize="16dp" />
+
+                <RadioGroup
+                    android:id="@+id/rg_attendance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/attendance_title"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_yes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Yes" />
+
+                    <RadioButton
+                        android:id="@+id/rb_no"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="No" />
+
+
+                </RadioGroup>
+
+
+                <TextView
+                    android:id="@+id/gradingcriteria_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rg_attendance"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/third_question"
+                    android:textColor="@color/green"
+                    android:textSize="16dp" />
+
+                <RadioGroup
+                    android:id="@+id/rg_gradingcriteria"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/gradingcriteria_title"
+                    android:layout_marginLeft="120dp"
+                    android:layout_marginTop="0dp"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/rb_half"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Half Output/Exams" />
+
+                    <RadioButton
+                        android:id="@+id/rb_pureoutput"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pure Output-based" />
+
+                    <RadioButton
+                        android:id="@+id/rb_moreoutput"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="More Output-based" />
+
+                    <RadioButton
+                        android:id="@+id/rb_morexams"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="More Exams based" />
+
+                    <RadioButton
+                        android:id="@+id/rb_purexams"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pure Exams" />
+
+
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/overall_rating_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rg_gradingcriteria"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Overall Rating:"
+                    android:textColor="@color/green"
+                    android:textSize="16dp" />
+
+
+                <RatingBar
+                    android:id="@+id/ratingBarOverall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/overall_rating_title"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="24dp"
+                    android:numStars="5"
+                    android:rating="3.5" />
+
+                <TextView
+                    android:id="@+id/desc_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ratingBarOverall"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/third_question"
+                    android:textColor="@color/green"
+                    android:textSize="16dp" />
+
+                <EditText
+                    android:id="@+id/et_reviewdesc"
+                    android:layout_width="249dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/desc_title"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/open_sans"
+                    android:hint="Describe Your Experience"
+                    android:textSize="12dp" />
+
+
+
+
+
+                <Button
+                    android:id="@+id/btn_submitreview"
+                    android:layout_width="202dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/et_reviewdesc"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@color/green"
+                    android:text="Submit Review"
+                    android:textColor="#FFFFFF"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.498"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+
+
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+</LinearLayout>

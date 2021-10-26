@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".userDashboard">
+
+    <!-- HEADER START -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/iv_home"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/menu_icon" />
+
+        <TextView
+            android:id="@+id/app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Arrow"
+            android:textColor="@color/green"
+            android:textSize="20dp" />
+
+
+        <ImageView
+            android:id="@+id/iv_profile"
+            android:layout_width="40dp"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@color/white"
+            android:padding="5dp"
+            android:src="@drawable/profile_icon" />
+
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="290dp">
+
+        <ImageView
+            android:id="@+id/mv_image"
+            android:layout_width="match_parent"
+            android:layout_height="292dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/prof_sample" />
+
+
+    </RelativeLayout>
+    <!-- HEADER END -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="35dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="100dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="Jane Dela Cruz"
+                    android:textColor="@color/black"
+                    android:textSize="28sp" />
+
+                <RatingBar
+                    android:id="@+id/prof_rating"
+                    style="@style/Widget.AppCompat.RatingBar.Indicator"
+                    android:progressTint="@color/green"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/name"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="55dp"
+                    android:layout_marginBottom="5dp"
+                    android:rating="4.5" />
+
+                <Button
+                    android:id="@+id/btn_addToFeatured"
+                    android:layout_width="500px"
+                    android:layout_height="80px"
+                    android:layout_below="@id/prof_rating"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="10dp"
+
+                    android:background="@drawable/rounded_button"
+                    android:fontFamily="@font/poppins_semibold"
+
+
+                    android:foregroundGravity="center_vertical"
+                    android:gravity="center"
+                    android:padding="2dp"
+                    android:text="Add to Featured"
+                    android:textColor="@color/white"
+
+                    android:textSize="14sp"
+
+
+                    />
+
+
+
+                <RelativeLayout
+                        android:id="@+id/comment_bar"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="@drawable/search_box_bg"
+                        android:elevation="8dp"
+                        android:layout_below="@id/btn_addToFeatured">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:fontFamily="@font/open_sans_semibold"
+                            android:text="Add Review..." />
+
+                    <ImageView
+                        android:id="@+id/commentButton"
+                        android:layout_width="26dp"
+                        android:layout_height="23dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="19dp"
+                        android:src="@drawable/review_button" />
+
+                    </RelativeLayout>
+
+                 <TextView
+                    android:id="@+id/Comment_title"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@id/comment_bar"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="18dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="Comments"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/comments_Recycler"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/Comment_title" />
+
+
+
+            </RelativeLayout>
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

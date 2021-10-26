@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="160dp"
+    android:layout_height="300dp"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="2dp"
+    app:cardElevation="8dp">
+
+    <LinearLayout
+        android:id="@+id/ll_allcard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <ImageView
+            android:id="@+id/featured_image"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/prof_sample" />
+
+        <TextView
+            android:id="@+id/featured_name"
+            android:layout_width="132dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:lineHeight="23dp"
+            android:text="Mrs. Dela Cruz"
+            android:textColor="@color/green"
+            android:textSize="20dp" />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_height="wrap_content"
+            android:rating="3.5" />
+
+        <TextView
+            android:id="@+id/featured_desc"
+            android:layout_below="@id/ratingBar"
+            android:layout_marginTop="3dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/open_sans"
+            android:text="Computer Science Professor" />
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

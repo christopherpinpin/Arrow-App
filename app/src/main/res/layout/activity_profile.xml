@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".userDashboard">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/iv_home"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/menu_icon" />
+
+        <TextView
+            android:id="@+id/app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Arrow"
+            android:textColor="@color/green"
+            android:textSize="20dp" />
+
+
+        <ImageView
+            android:id="@+id/iv_profile"
+            android:layout_width="40dp"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@color/white"
+            android:padding="5dp"
+            android:src="@drawable/profile_icon" />
+
+
+
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/search_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_profImage"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginBottom="5dp"
+            app:cardBackgroundColor="@color/white"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="30dp"
+
+            app:cardCornerRadius="150dp">
+
+            <ImageView
+
+                android:id="@+id/prof_Image"
+                android:layout_width="match_parent"
+
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:scaleType="centerCrop"
+                android:src="@drawable/default_avatar">
+
+            </ImageView>
+
+
+
+        </androidx.cardview.widget.CardView>
+
+
+        <TextView
+            android:id="@+id/profile_firstName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@id/card_profImage"
+            android:fontFamily="@font/poppins_semibold"
+            android:textColor="@color/black"
+            android:textSize="22dp" />
+
+        <TextView
+            android:id="@+id/profile_lastName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@id/profile_firstName"
+            android:fontFamily="@font/poppins_semibold"
+            android:textColor="@color/black"
+            android:textSize="22dp" />
+
+        <TextView
+            android:id="@+id/editprofile_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/profile_firstName"
+            android:layout_toRightOf="@id/card_profImage"
+            android:fontFamily="@font/open_sans"
+            android:text="EDIT PROFILE"
+            android:textColor="@color/darker_gray"
+            android:textSize="12dp" />
+        <TextView
+            android:id="@+id/logout_name"
+            android:layout_width="wrap_content"
+            android:layout_below="@id/profile_lastName"
+            android:layout_marginTop="5dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/editprofile_button"
+            android:fontFamily="@font/open_sans"
+            android:text="LOG OUT"
+            android:textColor="@color/darker_gray"
+            android:textSize="12dp" />
+
+
+
+
+    </RelativeLayout>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+
+        <RelativeLayout
+        android:id="@+id/rl_feat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <TextView
+
+            android:id="@+id/my_feat_profs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/poppins_bold"
+            android:text="My Featured Professors"
+            android:textAllCaps="true"
+            android:textColor="@color/green"
+            android:textSize="22sp"
+            android:layout_marginTop="10dp"
+            />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/myFeat_Recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/my_feat_profs"
+
+            android:layout_marginTop="0dp" />
+
+    </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_current"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_rated"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+
+                android:id="@+id/my_rated_profs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="My Rated Professors"
+                android:textAllCaps="true"
+                android:textColor="@color/green"
+                android:textSize="22sp" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/myRated_Recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/my_rated_profs"
+
+                android:layout_marginTop="0dp" />
+
+        </RelativeLayout>
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+</ScrollView>
+
+
+</LinearLayout>

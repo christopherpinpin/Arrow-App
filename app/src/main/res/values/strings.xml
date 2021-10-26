@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">Arrow</string>
+
+    <string name="main1_heading">Find the right\nProfessors for You!</string>
+    <string name="main2_heading">Find Your Classes</string>
+    <string name="main3_heading">Leave Reviews</string>
+
+    <string name="main1_desc">Find the right professors to take\nin your class!</string>
+    <string name="main2_desc">Find the right professors to take\nin your class!</string>
+    <string name="main3_desc">Help other students with their\nchoices and leave reviews about\nyour past classes!</string>
+    <string name="rev_comment"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+
+    <string name="first_question"> Scale of synchronous sessions? </string>
+    <string name="second_question"> Is attendance important?
+ </string>
+
+    <string name="third_question"> How was the grading criteria? </string>
+
+    <string-array name="colleges">
+        <item>CCS</item>
+        <item>COB</item>
+        <item>CED</item>
+        <item>COS</item>
+        <item>CLA</item>
+        <item>COS</item>
+        <item>SOE</item>
+    </string-array>
+
+    <string-array name="synchronous">
+        <item>None</item>
+        <item>Few Sessions</item>
+        <item>Balanced</item>
+        <item>More Synchronous</item>
+        <item>Pure Synchronous</item>
+    </string-array>
+
+    <string-array name="attendance">
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+
+    <string-array name="grading">
+        <item>Pure Output-based</item>
+        <item>More Output</item>
+        <item>Balanced</item>
+        <item>More Exams</item>
+        <item>Pure Exams</item>
+    </string-array>
+
+    <string name="addButton">Add to Featured</string>
+</resources>

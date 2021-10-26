@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="2dp"
+    app:cardElevation="8dp"
+    android:layout_margin="10dp">
+
+    <RelativeLayout
+        android:id="@+id/rl_comment_card"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/comment_first_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:fontFamily="@font/poppins_bold"
+            android:lineHeight="20dp"
+            android:text="Jane"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/comment_last_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_toRightOf="@+id/comment_first_name"
+            android:fontFamily="@font/poppins_bold"
+            android:lineHeight="20dp"
+            android:text="Dela Cruz"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+
+        <TextView
+            android:id="@+id/comment_course"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="4dp"
+            android:layout_toRightOf="@+id/comment_last_name"
+            android:fontFamily="@font/open_sans"
+            android:lineHeight="20dp"
+            android:text="BS IT"
+            android:textColor="@color/black"
+            android:textSize="8sp" />
+
+        <RatingBar
+            android:id="@+id/overall_rating"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@id/comment_course"
+            android:rating="4.5" />
+
+        <TextView
+            android:id="@+id/delete_review"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="110dp"
+            android:layout_marginTop="3dp"
+            android:layout_toRightOf="@id/overall_rating"
+            android:fontFamily="@font/open_sans"
+            android:text="Delete"
+            android:textColor="@color/darker_gray"
+            android:textSize="10sp"
+            android:visibility="invisible" />
+
+
+        <TextView
+            android:id="@+id/learning_event"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/overall_rating"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/open_sans_bold"
+            android:text="Pure Synchronous"
+            android:textColor="@color/green"
+            android:textSize="8.5dp" />
+
+        <TextView
+            android:id="@+id/attendance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/overall_rating"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/learning_event"
+            android:fontFamily="@font/open_sans_bold"
+            android:text="Important Attendance"
+            android:textColor="@color/purple_700"
+
+            android:textSize="8.5dp" />
+
+        <TextView
+            android:id="@+id/grading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/overall_rating"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/attendance"
+            android:fontFamily="@font/open_sans_bold"
+            android:text="Pure Exams"
+            android:textColor="@color/blue"
+            android:textSize="8.5dp" />
+
+        <TextView
+            android:id="@+id/review_comment"
+            android:layout_width="358dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/learning_event"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/open_sans_semibold"
+            android:text="@string/rev_comment"
+            android:textColor="@color/black"
+            android:textSize="8.5dp" />
+
+        <TextView
+            android:id="@+id/student_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:visibility="gone" />
+
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>
